@@ -22,6 +22,7 @@ import java.util.UUID;
 @Configuration
 @EnableConfigurationProperties(COSClientProperties.class)
 public class COSClientUtil {
+
     COSClientProperties cosClientProperties;
 
     public String upload(MultipartFile file) throws IOException {
