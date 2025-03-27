@@ -1,5 +1,6 @@
 package com.sky.service;
 
+import com.sky.dto.CategoryDTO;
 import com.sky.dto.CategoryPageQueryDTO;
 import com.sky.dto.EmployeePageQueryDTO;
 import com.sky.result.PageResult;
@@ -11,4 +12,8 @@ public interface CategoryService {
      * @return
      */
     PageResult pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
+
+    void add(CategoryDTO categoryDTO);
+
+    void update(CategoryDTO categoryDTO);
 }

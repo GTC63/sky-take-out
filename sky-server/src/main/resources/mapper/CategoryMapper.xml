@@ -14,4 +14,29 @@
         </where>
         order by sort asc
     </select>
+
+    <update id="update">
+        update category
+        <set>
+            <if test="name!=null and name!=''">
+                name=#{name},
+            </if>
+            <if test="sort!=null">
+                sort=#{sort},
+            </if>
+            <if test="updateTime !=null">
+                update_Time=#{updateTime},
+            </if>
+            <if test="updateUser!=null">
+                update_User=#{updateUser},
+            </if>
+            <if test="status!=null">
+                status=#{status},
+            </if>
+            <if test="sort!=null">
+                sort=#{sort}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
 </mapper>
