@@ -11,6 +11,8 @@ import com.qcloud.cos.model.PutObjectRequest;
 import com.qcloud.cos.model.PutObjectResult;
 import com.qcloud.cos.region.Region;
 import com.sky.properties.COSClientProperties;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,8 +21,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.UUID;
 
-@Configuration
-@EnableConfigurationProperties(COSClientProperties.class)
+@Data
+@AllArgsConstructor
 public class COSClientUtil {
 
     COSClientProperties cosClientProperties;
@@ -45,7 +47,7 @@ public class COSClientUtil {
             e.printStackTrace();
         }
         cosClient.shutdown();
-        String url = "https://" + bucketName + ".cos.+" + region + ".myqcloud.com/" + key;
+        String url = "https://" + bucketName + ".cos." + region + ".myqcloud.com/" + key;
         return url;
     }
 
