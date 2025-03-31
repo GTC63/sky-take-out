@@ -14,6 +14,6 @@ sky:
 qcloud:
   cos:
     bucket-name: web-tilas-1308746268
-    secret-id: AKIDqX3MUO7f2B7zjGUbXHo9JH1XvCKG1pqp
+
     secret-key: z9EJLCsNflgOsEZjiUFuNcs0yjHmDUXX
     region: ap-shanghai
